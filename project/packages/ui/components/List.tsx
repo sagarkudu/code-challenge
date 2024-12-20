@@ -1,5 +1,12 @@
-import React from 'react'
 
-export const List = () => {
-  return <p>List</p>
+export const List = ({data}) => {
+  return <div>
+  <p>List</p>
+  <ul>
+    {data.map((item, index) => (
+      <li key={index}>{item.name}</li>
+    ))}
+    </ul>
+  </div>
 }
+
